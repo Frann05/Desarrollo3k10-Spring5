@@ -1,0 +1,963 @@
+{
+	"info": {
+		"_postman_id": "2c52d18e-7594-466a-ba76-230e0907e6cc",
+		"name": "Sprint5",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30335290"
+	},
+	"item": [
+		{
+			"name": "Usuario",
+			"item": [
+				{
+					"name": "Get All",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/Usuarios",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"Usuarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get One",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/Usuarios/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"Usuarios",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n    {\r\n        \"id\": 1,\r\n        \"password\": \"35215\",\r\n        \"username\": \"JuanPa@hotmail.com\",\r\n        \"rol\": \"CLIENTE\",\r\n        \"fechaAlta\": \"2023-09-13T00:00:00\",\r\n        \"fechaModificacion\": null,\r\n        \"fechaBaja\": null\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/Usuarios",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"Usuarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"id\": 1,\r\n        \"email\": \"alguien123@hotmail.com\",\r\n        \"password\": \"3121\",\r\n        \"rol\": \"CLIENTE\",\r\n        \"fechaAlta\": \"2023-09-13T03:00:00.000+00:00\",\r\n        \"fechaModificacion\": \"\",\r\n        \"fechaBaja\": \"\"\r\n    }\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/Usuarios/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"Usuarios",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/Usuarios",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"Usuarios"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cliente",
+			"item": [
+				{
+					"name": "Get All",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/Clientes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"Clientes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get One",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/Personas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"Personas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"id\": 1,\r\n        \"nombre\": \"Juan\",\r\n        \"apellido\": \"Alvarez\",\r\n        \"telefono\": \"2213412\",\r\n        \"email\": \"JuanPa@hotmail.com\",\r\n        \"usuario\": {\r\n            \"id\": 1,\r\n            \"password\": \"35215\",\r\n            \"username\": \"JuanPa@hotmail.com\",\r\n            \"rol\": \"CLIENTE\",\r\n            \"fechaAlta\": \"2023-09-13T00:00:00\",\r\n            \"fechaModificacion\": null,\r\n            \"fechaBaja\": null\r\n        },\r\n        \"fechaAlta\": \"2023-09-13T00:00:00\",\r\n        \"fechaModificacion\": null,\r\n        \"fechaBaja\": null\r\n    },\r\n    {\r\n        \"id\": 2,\r\n        \"nombre\": \"Pepe\",\r\n        \"apellido\": \"Alvarez\",\r\n        \"telefono\": \"2213412\",\r\n        \"email\": \"JuanPa@hotmail.com\",\r\n        \"usuario\": {\r\n            \"id\": 2,\r\n            \"password\": \"35215\",\r\n            \"username\": \"JuanPa@hotmail.com\",\r\n            \"rol\": \"EMPLEADO\",\r\n            \"fechaAlta\": \"2023-09-13T00:00:00\",\r\n            \"fechaModificacion\": null,\r\n            \"fechaBaja\": null\r\n        },\r\n        \"fechaAlta\": \"2023-09-13T00:00:00\",\r\n        \"fechaModificacion\": null,\r\n        \"fechaBaja\": null\r\n    }\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/Clientes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"Clientes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"id\": 1,\r\n        \"nombre\": \"Juan\",\r\n        \"apellido\": \"Alvarez\",\r\n        \"telefono\": \"261736514\",\r\n        \"email\": \"JuanPa@hotmail.com\",\r\n        \"usuario\": {\r\n            \"id\": 1,\r\n            \"password\": \"35215\",\r\n            \"username\": \"JuanPa@hotmail.com\",\r\n            \"rol\": \"CLIENTE\",\r\n            \"fechaAlta\": \"2023-09-13T00:00:00\",\r\n            \"fechaModificacion\": null,\r\n            \"fechaBaja\": null\r\n        },\r\n        \"fechaAlta\": \"2023-09-13T00:00:00\",\r\n        \"fechaModificacion\": null,\r\n        \"fechaBaja\": null\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/Personas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"Personas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/Personas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"Personas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BuscarPorNyA",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/Clientes/filtradoPorNyA?filtro=Pe",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"Clientes",
+								"filtradoPorNyA"
+							],
+							"query": [
+								{
+									"key": "filtro",
+									"value": "Pe"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Domicilios",
+			"item": [
+				{
+					"name": "Get All",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/Domicilios",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"Domicilios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get One",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/Domicilios",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"Domicilios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"id\": 1,\r\n        \"calle\": \"Las Heras\",\r\n        \"numero\": 1200,\r\n        \"codigoPostal\": 3231,\r\n        \"localidad\": \"Ciudad\",\r\n        \"numeroDpto\": 1,\r\n        \"pisoDpto\": 1,\r\n        \"fechaAlta\": \"2021-10-12T00:00:00\",\r\n        \"fechaModificacion\": null,\r\n        \"fechaBaja\": null,\r\n        \"cliente\": {\r\n            \"id\": 1,\r\n            \"nombre\": \"Juan\",\r\n            \"apellido\": \"Alvarez\",\r\n            \"telefono\": \"2213412\",\r\n            \"email\": \"JuanPa@hotmail.com\",\r\n            \"usuario\": {\r\n                \"id\": 1,\r\n                \"password\": \"35215\",\r\n                \"username\": \"JuanPa@hotmail.com\",\r\n                \"rol\": \"CLIENTE\",\r\n                \"fechaAlta\": \"2023-09-13T00:00:00\",\r\n                \"fechaModificacion\": null,\r\n                \"fechaBaja\": null\r\n            },\r\n            \"fechaAlta\": \"2023-09-13T00:00:00\",\r\n            \"fechaModificacion\": null,\r\n            \"fechaBaja\": null\r\n        }\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/Domicilios",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"Domicilios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/Domicilios",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"Domicilios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/Domicilios",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"Domicilios"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ArticuloManufacturado",
+			"item": [
+				{
+					"name": "Get All",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/ArticulosManufacturados",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"ArticulosManufacturados"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get One",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/ArticulosManufacturados",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"ArticulosManufacturados"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"denominacion\": \"hamburguesa\",\r\n    \"descripcion\": \"queso,tomate\",\r\n    \"tiempoEstimadoCocina\": 12,\r\n    \"precioVenta\": 1800,\r\n    \"costo\": 1200,\r\n    \"urlImagen\": null,\r\n    \"fechaAlta\": \"2021-10-12T00:00:00\",\r\n    \"fechaModificacion\": null,\r\n    \"fechaBaja\": null,\r\n    \"detalleArticulosManufacturados\": [],\r\n    \"rubroArticulo\": null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/ArticulosManufacturados",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"ArticulosManufacturados"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/ArticulosManufacturados",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"ArticulosManufacturados"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/ArticulosManufacturados",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"ArticulosManufacturados"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BuscarPrecioAsc",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/ArticulosManufacturados/filtradoPorPrecioAsc",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"ArticulosManufacturados",
+								"filtradoPorPrecioAsc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BuscarPrecioDesc",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/ArticulosManufacturados/filtradoPorPrecioDesc",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"ArticulosManufacturados",
+								"filtradoPorPrecioDesc"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "RubroArticulos",
+			"item": [
+				{
+					"name": "Get All",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/RubroArticulos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"RubroArticulos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get One",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/RubroArticulos/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"RubroArticulos",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n        \"rubroPadre\": null,\r\n        \"subRubros\": [],\r\n        \"denominacion\": \"carne\",\r\n        \"fechaAlta\": null,\r\n        \"fechaModificacion\": null,\r\n        \"fechaBaja\": null\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/RubroArticulos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"RubroArticulos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/RubroArticulos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"RubroArticulos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/RubroArticulos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"RubroArticulos"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ArticuloInsumo",
+			"item": [
+				{
+					"name": "Get All",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/ArticulosInsumo",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"ArticulosInsumo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get One",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/ArticulosInsumo",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"ArticulosInsumo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Pedido",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n    {\r\n        \"id\":1,\r\n        \"fechaPedido\": null,\r\n        \"horaEstimadaFinalizacion\": null,\r\n        \"total\": 100.00,\r\n        \"totalCosto\": 50.00,\r\n        \"estado\": \"COMPLETADO\",\r\n        \"tipoEnvio\": \"DELIVERY\",\r\n        \"formaPago\": \"EFECTIVO\",\r\n        \"domicilioEntrega\": {\r\n            \"id\": 1,\r\n            \"calle\": \"Las Heras\",\r\n            \"numero\": 1200,\r\n            \"codigoPostal\": 3231,\r\n            \"localidad\": \"Ciudad\",\r\n            \"numeroDpto\": 1,\r\n            \"pisoDpto\": 1,\r\n            \"fechaAlta\": \"2021-10-12T00:00:00\",\r\n            \"fechaModificacion\": null,\r\n            \"fechaBaja\": null,\r\n            \"cliente\": {\r\n                \"id\": 1,\r\n                \"nombre\": \"Juan\",\r\n                \"apellido\": \"Alvarez\",\r\n                \"telefono\": \"2213412\",\r\n                \"email\": \"JuanPa@hotmail.com\",\r\n                \"usuario\": {\r\n                    \"id\": 1,\r\n                    \"password\": \"35215\",\r\n                    \"username\": \"JuanPa@hotmail.com\",\r\n                    \"rol\": \"CLIENTE\",\r\n                    \"fechaAlta\": \"2023-09-13T00:00:00\",\r\n                    \"fechaModificacion\": null,\r\n                    \"fechaBaja\": null\r\n                },\r\n                \"fechaAlta\": \"2023-09-13T00:00:00\",\r\n                \"fechaModificacion\": null,\r\n                \"fechaBaja\": null\r\n            }\r\n        },\r\n        \"fechaAlta\": null,\r\n        \"fechaModificacion\": null,\r\n        \"fechaBaja\": null,\r\n        \"cliente\": {\r\n            \"id\": 1,\r\n            \"nombre\": \"Juan\",\r\n            \"apellido\": \"Alvarez\",\r\n            \"telefono\": \"2213412\",\r\n            \"email\": \"JuanPa@hotmail.com\",\r\n            \"usuario\": {\r\n                \"id\": 1,\r\n                \"password\": \"35215\",\r\n                \"username\": \"JuanPa@hotmail.com\",\r\n                \"rol\": \"CLIENTE\",\r\n                \"fechaAlta\": \"2023-09-13T00:00:00\",\r\n                \"fechaModificacion\": null,\r\n                \"fechaBaja\": null\r\n            },\r\n            \"fechaAlta\": \"2023-09-13T00:00:00\",\r\n            \"fechaModificacion\": null,\r\n            \"fechaBaja\": null\r\n        }\r\n    }"
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/Pedidos?",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"Pedidos"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/Pedidos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"Pedidos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "VerPedidosPorUsuario",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/Pedidos/VerPedidosPorUsuario",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"Pedidos",
+								"VerPedidosPorUsuario"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"franco@gmail.com\",\r\n    \"password\": \"12345\",\r\n    \"lastname\": \"giuliani\",\r\n    \"firstname\": \"franco\",\r\n    \"country\": \"Argentina\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/auth/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"franco@gmail.com\",\r\n    \"password\": \"12345\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "demo",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJmcmFuY29AZ21haWwuY29tIiwiaWF0IjoxNzAwMDYxNTE0LCJleHAiOjE3MDAwNjI5NTR9.5bKZ70I052b2U9eIMVT88vkEyg-PuPuuo1MNn1XEs90",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/demoUser",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"demoUser"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
